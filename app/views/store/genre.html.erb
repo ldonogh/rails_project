@@ -26,9 +26,11 @@
 					<p><%= @genre.description %></p>
 				</div>
 				<div id="books">
-					<% @books.select("genre_id = '#{:id}'").each do |book| %> 
+					<% @books.each do |book| %> 
 						<div class="book">
-							<%= render @book %>
+							<%= link_to book.title, store_book_path(book) %><br />
+								<img src="images/item1.jpg" alt="" width="202" height="173" /><br />
+								<span><%= book.price %></span><a href="#" class="buy">Buy this Product</a>
 						</div>
 					<% end %>
 				</div>

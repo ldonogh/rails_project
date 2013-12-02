@@ -3,7 +3,7 @@ RailsProject::Application.routes.draw do
 
   root :to => 'store#index', :via => :get
   match 'store/book/:id' => 'store#book', :as => :store_book, :via => :get
-  match 'store/genre/:id' => 'store#genre', :as => :store_genre, :via => :get
+  match 'store/genre/:genre_id' => 'store#genre', :as => :store_genre, :via => :get
   
   ActiveAdmin.routes(self)
 

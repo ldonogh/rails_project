@@ -14,6 +14,8 @@ class BooksController < ApplicationController
   # GET /books/1.json
   def book
     @book = Book.find(params[:id])
+    @genre = @book.genre_id
+    @genres = Genre.all
 
     respond_to do |format|
       format.html # show.html.erb
@@ -22,7 +24,9 @@ class BooksController < ApplicationController
   end
 
   def genre
-    @books = Book.select("genre_id = '#{:id}'")
+    
+      @books = Genre.find(params[:genre_id]).books
+    
 
     respond_to do |format|
       format.html # index.html.erb

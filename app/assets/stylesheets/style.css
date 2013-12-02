@@ -6,17 +6,65 @@ body{
 height:100%;
 background-color:#F3F1E9;
 position:relative;
+margin-bottom:50px;
+font-family:"Calibri";
 }
 html > body{
 min-height:100%;
 height:auto;
 }
 
+#menu{
+	text-align: center;
+}
+
 #menu li{
 	display: inline;
+	padding: 20px;
 }
 
 #header, #wrapper{
 	width:999px;
 	margin:0 auto;
+}
+
+#books{
+	float:left;
+	padding:22px 0 0 0;
+	width:770px;
+	background-color: #FFF;
+}
+
+#sidebar{
+	width:140px;
+	float:left;
+	padding:13px 32px 0 23px;
+}
+
+#list{
+	list-style: none;
+}
+
+#content_inside{
+	width:1000px;
+	margin:0 auto;
+	overflow:hidden;
+}
+
+#books{
+	padding:10px;
+	padding-bottom: 300px;
+}
+
+.book{
+	padding:20px;
+	border: 1px solid #CDCDCD;
+	width:200px;
+	height:225px;
+	float:left;
+	display:inline;
+}
+
+#main{
+	padding-bottom:30px;
 }

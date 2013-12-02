@@ -13,8 +13,9 @@ class GenresController < ApplicationController
   # GET /genres/1
   # GET /genres/1.json
   def genre
-    @genre = Genre.find(params[:id])
+    @genre = Genre.find(params[:genre_id])
     @genres = Genre.all
+    @books = @genre.books #<-- THIS IS IMPORTANT
 
     respond_to do |format|
       format.html # genre.html.erb
@@ -23,7 +24,7 @@ class GenresController < ApplicationController
   end
 
   def book
-    @genre = Genre.find(params[:id])
+    @genre = Genre.find(params[:genre_id])
     @genres = Genre.all
 
     respond_to do |format|
