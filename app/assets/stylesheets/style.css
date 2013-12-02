@@ -58,6 +58,7 @@ height:auto;
 
 .book{
 	padding:20px;
+	margin:3px;
 	border: 1px solid #CDCDCD;
 	width:200px;
 	height:225px;
@@ -67,4 +68,9 @@ height:auto;
 
 #main{
 	padding-bottom:30px;
+}
+
+.search{
+	text-align: right;
+	padding:10px;
 }

@@ -2,8 +2,10 @@ RailsProject::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
 
   root :to => 'store#index', :via => :get
-  match 'store/book/:id' => 'store#book', :as => :store_book, :via => :get
-  match 'store/genre/:genre_id' => 'store#genre', :as => :store_genre, :via => :get
+  match 'book/:id' => 'store#book', :as => :store_book, :via => :get
+  match 'genre/:genre_id' => 'store#genre', :as => :store_genre, :via => :get
+
+  match 'search' => 'store#search_results', :as => 'search_results', :via => :post
   
   ActiveAdmin.routes(self)
 

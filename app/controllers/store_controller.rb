@@ -14,4 +14,9 @@ class StoreController < ApplicationController
     @genre = Genre.find(params[:genre_id])
     @genres = Genre.order(:name)
   end
+  
+  #this is temporary
+  def search_results
+    @books = Book.where("title LIKE ?", "%#{params[:keywords]}%")
+  end
 end
