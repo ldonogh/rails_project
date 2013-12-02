@@ -1,11 +1,14 @@
 RailsProject::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
+
+  root :to => 'store#index', :via => :get
+  match 'store/:id' => 'store#show', :as => :store_book, :via => :get
+  
   ActiveAdmin.routes(self)
 
   resources :books
 
-  root :to => 'store#index', :via => :get
-  match 'store/:id' => 'store#show', :as => :store_book, :via => :get
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

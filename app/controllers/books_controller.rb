@@ -25,7 +25,7 @@ class BooksController < ApplicationController
   # GET /books/new.json
   def new
     @book = Book.new
-    @categories = Category.order(:name)
+    @genres = Genre.order(:name)
 
     respond_to do |format|
       format.html # new.html.erb
@@ -36,7 +36,7 @@ class BooksController < ApplicationController
   # GET /books/1/edit
   def edit
     @book = Book.find(params[:id])
-    @categories = Category.order(:name)
+    @genres = Genre.order(:name)
   end
 
   # POST /books
