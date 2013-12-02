@@ -36,3 +36,7 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+#ActiveAdmin
+gem 'activeadmin'
+gem "meta_search",    '>= 1.1.0.pre'
