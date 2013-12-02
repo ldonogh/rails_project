@@ -2,11 +2,13 @@ RailsProject::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
 
   root :to => 'store#index', :via => :get
-  match 'store/:id' => 'store#show', :as => :store_book, :via => :get
+  match 'store/book/:id' => 'store#book', :as => :store_book, :via => :get
+  match 'store/genre/:id' => 'store#genre', :as => :store_genre, :via => :get
   
   ActiveAdmin.routes(self)
 
   resources :books
+  resources :genres
 
   
 

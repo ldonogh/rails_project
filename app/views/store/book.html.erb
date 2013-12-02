@@ -14,7 +14,7 @@
 				<%= render "menu" %>
 			</ul>
 	</div>
-	<div id="wrapper">																																																																											
+	<div id="wrapper">										
 		<div id="content_inside">
 			<div id="sidebar">	
 				<ul id="list">
@@ -23,13 +23,10 @@
 			</div>
 			<div id="main">
 				<div class="welcome">
-					<p>Welcome to my store.</p>
+					<p><%= @genre.description %></p>
 				</div>
 				<div id="books">
-					
-						<div class="book">
-							<%= render @books %>
-						</div>
+					<!-- book content here-->
 				</div>
 			</div>
 		</div>

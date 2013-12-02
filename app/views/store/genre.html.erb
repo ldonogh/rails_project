@@ -23,13 +23,14 @@
 			</div>
 			<div id="main">
 				<div class="welcome">
-					<p>Welcome to my store.</p>
+					<p><%= @genre.description %></p>
 				</div>
 				<div id="books">
-					
+					<% @books.select("genre_id = '#{:id}'").each do |book| %> 
 						<div class="book">
-							<%= render @books %>
+							<%= render @book %>
 						</div>
+					<% end %>
 				</div>
 			</div>
 		</div>

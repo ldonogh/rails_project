@@ -12,12 +12,21 @@ class BooksController < ApplicationController
 
   # GET /books/1
   # GET /books/1.json
-  def show
+  def book
     @book = Book.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @book }
+    end
+  end
+
+  def genre
+    @books = Book.select("genre_id = '#{:id}'")
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @books }
     end
   end
 
