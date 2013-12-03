@@ -2,6 +2,10 @@
 padding:0px;
 margin:0px;
 }
+a{
+	text-decoration:none;
+	color: #000;
+}
 body{
 height:100%;
 background-color:#F3F1E9;
@@ -12,6 +16,10 @@ font-family:"Calibri";
 html > body{
 min-height:100%;
 height:auto;
+}
+
+#main a{
+	font-weight:bold;
 }
 
 #menu{
@@ -41,6 +49,15 @@ height:auto;
 	padding:13px 32px 0 23px;
 }
 
+#sidebar li{
+	padding:4px;
+}
+
+#sidebar li:nth-child(2n+2){
+	background-color: #FFF;
+}
+
+
 #list{
 	list-style: none;
 }
@@ -68,9 +85,22 @@ height:auto;
 
 #main{
 	padding-bottom:30px;
+	overflow:hidden;
 }
 
 .search{
 	text-align: right;
 	padding:10px;
+}
+
+.title{
+
+}
+
+.author{
+	font-style: italic;
+}
+
+.price{
+	float:right;
 }

@@ -1,5 +1,6 @@
 <div class="book">
-	<%= link_to book.title, store_book_path(book) %><br />
+	<span class="title"><%= link_to book.title, store_book_path(book) %></span><br />
+	<span class="author"><%= book.author %></span>
 <img src="images/item1.jpg" alt="" width="202" height="173" /><br />
-<span><%= book.price %></span><a href="#" class="buy">Buy this Product</a>
+<span class="price"><%= book.price %></span>
 </div>
