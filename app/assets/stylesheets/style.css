@@ -1,21 +1,21 @@
 *{
-padding:0px;
-margin:0px;
+	padding:0px;
+	margin:0px;
 }
 a{
 	text-decoration:none;
 	color: #000;
 }
 body{
-height:100%;
-background-color:#F3F1E9;
-position:relative;
-margin-bottom:50px;
-font-family:"Calibri";
+	height:100%;
+	background-color:#1d1d1d;
+	position:relative;
+	margin-bottom:50px;
+	font-family:"Calibri";
 }
 html > body{
-min-height:100%;
-height:auto;
+	min-height:100%;
+	height:auto;
 }
 
 #main a{
@@ -24,6 +24,7 @@ height:auto;
 
 #menu{
 	text-align: center;
+	
 }
 
 #menu li{
@@ -34,6 +35,7 @@ height:auto;
 #header, #wrapper{
 	width:999px;
 	margin:0 auto;
+	background-color: #bababa
 }
 
 #books{
@@ -54,7 +56,7 @@ height:auto;
 }
 
 #sidebar li:nth-child(2n+2){
-	background-color: #FFF;
+	background-color: #d3d3d3;
 }
 
 
@@ -95,6 +97,11 @@ height:auto;
 
 .title{
 
+}
+
+.book img{
+	margin-left:30px;
+	padding: 3px;
 }
 
 .author{

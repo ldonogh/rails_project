@@ -1,6 +1,10 @@
 <div class="book">
 	<span class="title"><%= link_to book.title, store_book_path(book) %></span><br />
 	<span class="author"><%= book.author %></span>
-<img src="images/item1.jpg" alt="" width="202" height="173" /><br />
+<% unless book.image_filename.blank? %>
+<%= image_tag(book.image.filename) %><br />
+<% else %>
+<%= image_tag("no_image.jpg") %><br />
+<% end %>
 <span class="price"><%= book.price %></span>
 </div>
