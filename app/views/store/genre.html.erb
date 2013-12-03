@@ -8,13 +8,8 @@
 </head>
 
 <body>
-	<div id="header">								
-			<img src="images/header.jpg" alt="banner" width="999" height="222" border="0" /><br />					
-			<ul id="menu">
-				<%= render "menu" %>
-			</ul>
-	</div>
-	<div id="wrapper">																																																																											
+	<%= render "header" %>
+	<div id="wrapper">									
 		<div id="content_inside">
 			<div id="sidebar">	
 				<ul id="list">
@@ -26,12 +21,21 @@
 					<p><%= render "search" %></p>
 				</div>
 				<div id="books">
+					<h1><%= @genre.name %></h1>
+					<p><%= @genre.description %></p>
+					<% if @books.empty? %>
+							<p>There are currently no books available in the <%= @genre.name %> category.</p>
+						<% end %>
 					<% @books.each do |book| %> 
 						<div class="book">
 							<span class="title"><%= link_to book.title, store_book_path(book) %></span><br />
 							<span class="author"><%= book.author %></span>
-						<img src="images/item1.jpg" alt="" width="202" height="173" /><br />
-						<span class="price"><%= book.price %></span>
+						<% unless book.image_filename.blank? %>
+						<%= link_to image_tag(book.image_filename), store_book_path(book) %><br />
+						<% else %>
+						<%= link_to image_tag("no_image.jpg"), store_book_path(book) %><br />
+						<% end %>
+						<span class="price"><%= number_to_currency(book.price) %></span>
 						</div>
 					<% end %>
 				</div>

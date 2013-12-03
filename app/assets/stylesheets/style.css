@@ -6,6 +6,11 @@ a{
 	text-decoration:none;
 	color: #000;
 }
+
+a:hover{
+	text-decoration:underline;
+}
+
 body{
 	height:100%;
 	background-color:#1d1d1d;
@@ -18,13 +23,20 @@ html > body{
 	height:auto;
 }
 
+h1, h2, h3{
+	color: #595959;
+	font-family: Times;
+	font-style: italic;
+}
+
 #main a{
 	font-weight:bold;
 }
 
 #menu{
 	text-align: center;
-	
+	background-color: #d3d3d3;
+	padding:4px;
 }
 
 #menu li{
@@ -35,7 +47,7 @@ html > body{
 #header, #wrapper{
 	width:999px;
 	margin:0 auto;
-	background-color: #bababa
+	background-color: #bababa;
 }
 
 #books{
@@ -48,7 +60,9 @@ html > body{
 #sidebar{
 	width:140px;
 	float:left;
+	margin:40px 0px 0px;
 	padding:13px 32px 0 23px;
+
 }
 
 #sidebar li{
@@ -65,7 +79,7 @@ html > body{
 }
 
 #content_inside{
-	width:1000px;
+	width:999px;
 	margin:0 auto;
 	overflow:hidden;
 }
@@ -73,14 +87,21 @@ html > body{
 #books{
 	padding:10px;
 	padding-bottom: 300px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+#books p{
+	margin-top: 10px;
+	margin-bottom: 20px;
 }
 
 .book{
 	padding:20px;
 	margin:3px;
 	border: 1px solid #CDCDCD;
-	width:200px;
-	height:225px;
+	width:190px;
+	height:240px;
 	float:left;
 	display:inline;
 }
@@ -102,6 +123,8 @@ html > body{
 .book img{
 	margin-left:30px;
 	padding: 3px;
+	width:125px;
+	height:175px;
 }
 
 .author{
@@ -110,4 +133,27 @@ html > body{
 
 .price{
 	float:right;
+}
+
+.description {
+    margin-right: 20px;
+    text-align: right;
+    margin-left: 140px;
+}
+.desc_text {
+    text-align:right;
+    padding:10px;
+}
+
+.isbn{
+	color: #6d6d6d;
+	margin:0;
+}
+
+#book_page img{
+	float:left;
+	max-height: 300px;
+	max-width: 200px;
+	margin-top: 120px;
+	padding:15px;
 }

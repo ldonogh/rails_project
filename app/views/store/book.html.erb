@@ -8,12 +8,7 @@
 </head>
 
 <body>
-	<div id="header">								
-			<img src="images/header.jpg" alt="banner" width="999" height="222" border="0" /><br />					
-			<ul id="menu">
-				<%= render "menu" %>
-			</ul>
-	</div>
+	<%= render "header" %>
 	<div id="wrapper">										
 		<div id="content_inside">
 			<div id="sidebar">	
@@ -26,9 +21,20 @@
 					<p><%= render "search" %></p>
 				</div>
 				<div id="books">
-					<h2><%= @book.title %></h2>
-					<h3><%= @book.author %></h3>
-					<p><%= @book.description %></p>
+					<div id="book_page">
+						<% unless @book.image_filename.blank? %>
+							<%= image_tag(@book.image_filename) %><br />
+						<% else %>
+								<%= image_tag("no_image.jpg") %><br />
+						<% end %>
+				        <div class="description">
+				            <h2><%= @book.title %></h2>
+							<h3><%= @book.author %></h3>
+							<p class="isbn">ISBN: <%= @book.isbn %></p>
+				            <p class="desc_text"><%= @book.description %></p>
+				            <h2 id="price"><%= number_to_currency(@book.price) %></h2>
+				        </div>
+					</div>
 				</div>
 			</div>
 		</div>
