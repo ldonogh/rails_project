@@ -6,5 +6,6 @@ class Book < ActiveRecord::Base
   #add validations
   validates :author, :isbn, :price, :title, :description, :presence => true
   validates :price, :numericality => true
+  validates :isbn, :isbn_format => true
 
 end
