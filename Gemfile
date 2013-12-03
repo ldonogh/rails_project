@@ -48,3 +48,6 @@ gem "isbn_validation", "~> 1.1.1"
 #Paperclip
 gem 'paperclip'
 gem 'aws-sdk'
+
+#Kaminari
+gem 'kaminari'

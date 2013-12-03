@@ -21,21 +21,13 @@
 					<p><%= render "search" %></p>
 				</div>
 				<div id="books">
-					<div id="book_page">
-						<% unless @book.image_filename.blank? %>
-							<%= image_tag(@book.image_filename) %><br />
-						<% else %>
-								<%= image_tag("no_image.jpg") %><br />
-						<% end %>
-				        <div class="description">
-				            <h2><%= @book.title %></h2>
-							<h3><%= @book.author %></h3>
-							<p class="isbn">ISBN: <%= @book.isbn %></p>
-				            <p class="desc_text"><%= @book.description %></p>
-				            <h2 id="price"><%= number_to_currency(@book.price) %></h2>
-				            <%= link_to "Check out", check_out_path(@book) %>
-				        </div>
-					</div>
+					<%= field_set_tag do %>
+					Name: <%= text_field_tag :name %><br/>
+					Email: <%= email_field_tag :email %><br/>
+					Address: <%= text_field_tag :address %><br/>
+
+					<%= submit_tag 'Submit Order' %>
+					<% end %>
 				</div>
 			</div>
 		</div>

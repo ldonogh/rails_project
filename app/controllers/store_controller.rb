@@ -19,4 +19,10 @@ class StoreController < ApplicationController
     @books = Book.where("#{params[:search_select]} LIKE ?", "%#{params[:keywords]}%")
     @genres = Genre.order(:name)
   end
+
+  def check_out
+    @genres = Genre.order(:name)
+    @book = Book.find(params[:id])
+  end
+
 end
