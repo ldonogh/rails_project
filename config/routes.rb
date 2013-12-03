@@ -8,8 +8,7 @@ RailsProject::Application.routes.draw do
   match 'search' => 'store#search', :as => 'search', :via => :get
   match 'search' => 'store#search_results', :as => 'search_results', :via => :post
 
-  match 'check_out/:id' => 'store#check_out', :as => 'check_out', :via => :get
-  #match 'search' => 'store#search_results', :as => 'search_results', :via => :post
+  match 'buy/:id' => 'store#buy', :as => 'buy', :via => :get
   
   ActiveAdmin.routes(self)
 

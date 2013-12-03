@@ -2,9 +2,9 @@
 	<span class="title"><%= link_to book.title, store_book_path(book) %></span><br />
 	<span class="author"><%= book.author %></span>
 <% unless book.image_filename.blank? %>
-<%= link_to image_tag(book.image_filename), store_book_path(book) %><br />
+<%= link_to image_tag(book.image_filename, :alt => "cover"), store_book_path(book) %><br />
 <% else %>
-<%= link_to image_tag("no_image.jpg"), store_book_path(book) %><br />
+<%= link_to image_tag("no_image.jpg", :alt => "no image"), store_book_path(book) %><br />
 <% end %>
 <span class="price"><%= number_to_currency(book.price) %></span>
 </div>

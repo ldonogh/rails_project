@@ -23,9 +23,9 @@
 				<div id="books">
 					<div id="book_page">
 						<% unless @book.image_filename.blank? %>
-							<%= image_tag(@book.image_filename) %><br />
+							<%= image_tag(@book.image_filename, :alt => "cover") %><br />
 						<% else %>
-								<%= image_tag("no_image.jpg") %><br />
+								<%= image_tag("no_image.jpg", :alt => "no image") %><br />
 						<% end %>
 				        <div class="description">
 				            <h2><%= @book.title %></h2>
@@ -33,7 +33,7 @@
 							<p class="isbn">ISBN: <%= @book.isbn %></p>
 				            <p class="desc_text"><%= @book.description %></p>
 				            <h2 id="price"><%= number_to_currency(@book.price) %></h2>
-				            <%= link_to "Check out", check_out_path(@book) %>
+				            <h2><%= link_to "Order this book", buy_path(@book) %></h2>
 				        </div>
 					</div>
 				</div>

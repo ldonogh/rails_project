@@ -20,7 +20,7 @@ class StoreController < ApplicationController
     @genres = Genre.order(:name)
   end
 
-  def check_out
+  def buy
     @genres = Genre.order(:name)
     @book = Book.find(params[:id])
   end
