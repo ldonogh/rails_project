@@ -5,6 +5,7 @@ RailsProject::Application.routes.draw do
   match 'book/:id' => 'store#book', :as => :store_book, :via => :get
   match 'genre/:genre_id' => 'store#genre', :as => :store_genre, :via => :get
 
+  match 'search' => 'store#search', :as => 'search', :via => :get
   match 'search' => 'store#search_results', :as => 'search_results', :via => :post
   
   ActiveAdmin.routes(self)

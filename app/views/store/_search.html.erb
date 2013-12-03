@@ -1,3 +1,4 @@
 <%= form_tag search_path do %>
+	<%= select_tag :search_select, options_for_select(['Title', 'Author', 'ISBN']) %>
 	<%= text_field_tag :keywords %> <%= submit_tag 'Search' %>
 <% end %>
