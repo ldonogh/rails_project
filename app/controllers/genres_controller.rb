@@ -17,5 +17,6 @@ class GenresController < ApplicationController
     @genre = Genre.find(params[:genre_id])
     @genres = Genre.all
   end
+end
 
   

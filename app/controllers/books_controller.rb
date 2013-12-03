@@ -13,8 +13,8 @@ class BooksController < ApplicationController
     @genres = Genre.all
   end
 
-  def genre
-      @books = Genre.find(params[:genre_id]).books
-  end
+  #def genre
+  #    @books = Genre.find(params[:genre_id]).books
+  #end
 
  

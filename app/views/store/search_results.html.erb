@@ -1,2 +1,39 @@
-<h2>Search Result</h2>
-<%= render @books %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Rumsfeld Books</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+	<div id="header">								
+			<img src="images/header.jpg" alt="banner" width="999" height="222" border="0" /><br />					
+			<ul id="menu">
+				<%= render "menu" %>
+			</ul>
+	</div>
+	<div id="wrapper">											
+		<div id="content_inside">
+			<div id="sidebar">	
+				<ul id="list">
+					<%= render "menu" %>
+				</ul>
+			</div>
+			<div id="main">
+				<div class="search">
+					<p><%= render "search" %></p>
+				</div>
+				<div id="books">
+						<% if @books.empty? %>
+							<p>No result found for "<%= params[:keywords] %>".</p>
+						<% end %>
+						<%= render @books %>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
