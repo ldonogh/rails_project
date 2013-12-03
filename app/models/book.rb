@@ -6,7 +6,7 @@ class Book < ActiveRecord::Base
   #add validations
   validates :author, :isbn, :price, :title, :description, :presence => true
   validates :price, :numericality => true
-  #validates :isbn,   :isbn_format => true
-  validates_format_of :isbn, :with => /^(?:\d[\ |-]?){13}$/i
+  validates :isbn,   :isbn_format => true
+  #validates_format_of :isbn, :with => /^(?:\d[\ |-]?){13}$/i
 
 end

@@ -44,3 +44,7 @@ gem "meta_search",    '>= 1.1.0.pre'
 
 #ISBN Validation
 gem "isbn_validation", "~> 1.1.1"
+
+#Paperclip
+gem 'paperclip'
+gem 'aws-sdk'
