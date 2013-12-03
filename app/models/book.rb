@@ -4,6 +4,7 @@ class Book < ActiveRecord::Base
   belongs_to :genre
 
   #add validations
-
+  validates :author, :isbn, :price, :title, :description, :presence => true
+  validates :price, :numericality => true
 
 end
