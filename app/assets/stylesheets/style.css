@@ -65,12 +65,17 @@ h1, h2, h3{
 
 }
 
-#sidebar li{
+#sidebar ul li{
 	padding:4px;
 }
 
-#sidebar li:nth-child(2n+2){
+#sidebar ul li:nth-child(2n+2){
 	background-color: #d3d3d3;
+}
+
+#sidebar ol{
+	background-color: #d3d3d3;
+	margin-left:20px;
 }
 
 

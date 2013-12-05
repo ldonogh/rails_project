@@ -3,6 +3,7 @@
 		<div id="content_inside">
 			<div id="sidebar">	
 				<ul id="list">
+					<%= render "cart" %>
 					<%= render "menu" %>
 				</ul>
 			</div>
@@ -23,7 +24,7 @@
 							<p class="isbn">ISBN: <%= @book.isbn %></p>
 				            <p class="desc_text"><%= @book.description %></p>
 				            <h2 id="price"><%= number_to_currency(@book.price) %></h2>
-				            <h2><%= link_to "Order this book", buy_path(@book) %></h2>
+				            <h2><%= link_to "Add to Cart", add_cart_book_path(@book) %></h2>
 				        </div>
 					</div>
 				</div>

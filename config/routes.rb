@@ -12,7 +12,16 @@ RailsProject::Application.routes.draw do
   
   ActiveAdmin.routes(self)
 
-  resources :books
+  resources :books do
+    collection do
+      get :empty_cart
+    end
+    member do
+      get :add_cart
+      get :remove_cart
+    end
+  end
+
   resources :genres
 
   
